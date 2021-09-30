@@ -39,7 +39,12 @@ deployed to the legacy `extcloud05`.
 .. warning:: Our primary concern at this stage is that both ECP and BioExcel portal application
    developers will need to make changes to their applications/VMs by October 29th so that the
    applications/VMs can be deployed to `Embassy4`. If it is not possible to do so before that
-   date then the applications/VMs will no longer run.
+   date then the applications/VMs will no longer run from Monday Nov. 1st.
+
+.. warning:: The anticipated "At Risk" period for both the ECP and the BioExcel portals is
+   during the period Mon. 18th, Tue. 19th and Wed. 20th October. During this time either or
+   both portals may be offline for a number of hours, although of course we will aim to keep
+   any disruption to the minimum necessary.
 
 We are currently assessing the impact of a migration to `Embassy4` on our ``cpa-bioexcel-cwl``
 (https://github.com/EMBL-EBI-TSI/cpa-bioexcel-cwl) Cloud Portal BioExcel application/VM, and so
