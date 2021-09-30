@@ -7,7 +7,6 @@
 ============================================================
 
 :Created: |today|
-:Version: |release|
 
 |hr|
 
@@ -16,7 +15,7 @@ Summary
 
 As explained in the |EMBL|-|EBI| |VAC| team's `Documentation <https://docs.embassy.ebi.ac.uk/index.html>`_,
 there is a new version of the |EBI|'s OpenStack cloud software already in operation called
-internally "Embassy Cloud Version 4" (or `Embassy4 <https://uk1.embassy.ebi.ac.uk>`_).
+(internally) "Embassy Cloud Version 4", or `Embassy4 <https://uk1.embassy.ebi.ac.uk>`_.
 
 A first part of the previous version of Embassy ("Embassy Cloud Version 3") has already been
 decommissioned, and following internal tests this appears to have completed successfully [#f1]_.
@@ -40,8 +39,8 @@ deployed to the legacy `extcloud05`.
    applications/VM\ s will no longer run.
 
 We are currently assessing the impact of a migration to `Embassy4` on our ``cpa-bioexcel-cwl``
-(https://github.com/EMBL-EBI-TSI/cpa-bioexcel-cwl) Cloud Portal BioExcel application, and so far
-the principle changes to make it compatible with `Embassy4` are as follows :
+(https://github.com/EMBL-EBI-TSI/cpa-bioexcel-cwl) Cloud Portal BioExcel application/VM, and so
+far the principle changes to make it compatible with `Embassy4` are as follows :
 
  * The use of username/password combinations has stopped, instead "Applicaton Credentials" [#f3]_ are now
    used and passed in environment variables (e.g. ``OS_APPLICATION_CREDENTIAL_SECRET`` and 
