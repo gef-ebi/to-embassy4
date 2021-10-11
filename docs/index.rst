@@ -3,8 +3,8 @@
 .. figure:: _static/img/atl.site.logo.png
    :align: left
 
-|EBI| Cloud Portal and BioExcel Portal To Embassy4 migration
-============================================================
+BioExcel Portal and |EBI| Cloud Portal (|ECP|) To Embassy4 migration
+====================================================================
 
 :Created: |today|
 
@@ -13,14 +13,14 @@
 Summary
 =======
 
-As explained in the |EMBL|-EBI |VAC| team's `Documentation <https://docs.embassy.ebi.ac.uk/index.html>`_,
-there is a new version of the EBI's OpenStack cloud software already in operation called
+As explained in the |EMBL|-EBI |VAC| team's `Documentation <https://docs.embassy.ebi.ac.uk/index.html>`_
+[#f1]_, there is a new version of the EBI's OpenStack cloud software already in operation called
 (internally) "Embassy Cloud Version 4", or `Embassy4 <https://uk1.embassy.ebi.ac.uk>`_.
 
 Of the previous version of Embassy ("Embassy Cloud Version 3"), one part -- `extcloud06` -- has
 already been decommissioned, and following internal tests this appears to have completed
 successfully
-[#f1]_.
+[#f2]_.
 
 On **Monday Nov. 1st 2021** the second and final part -- `extcloud05 <https://extcloud05.ebi.ac.uk/>`_
 -- will be decommissioned. **We therefore we need to have all remaining activities which use
@@ -30,7 +30,7 @@ Impact
 ======
 
 The following EBI-managed services (i.e. the |UI|\ s and the |REST| services) have both already
-migrated to `Embassy4` [#f2]_, however currently the |VM|\ s which they create/"spin up" are still being
+migrated to `Embassy4` [#f3]_, however currently the |VM|\ s which they create/"spin up" are still being
 deployed to the legacy `extcloud05`.
 
  * |ECP| (https://cloud-portal.ebi.ac.uk)
@@ -51,7 +51,7 @@ We are currently assessing the impact of a migration to `Embassy4` on our ``cpa-
 far the principle changes to make it compatible with `Embassy4` are as follows :
 
  * The use of username/password combination credentials is not possible in `Embassy4`, instead
-   "Applicaton Credentials" [#f3]_ are now used and passed in environment variables (e.g.
+   "Applicaton Credentials" [#f4]_ are now used and passed in environment variables (e.g.
    ``OS_APPLICATION_CREDENTIAL_SECRET`` and ``OS_APPLICATION_CREDENTIAL_ID``).
  * The version of Terraform which the portals use for deployment purposes needed to be changed, and
    as a result the :file:`deploy.sh`, :file:`state.sh` and :file:`destroy.sh` scripts used to control the
@@ -63,29 +63,22 @@ Action Plan
 
 Provisionally we have set ourselves the following timelines over the coming weeks :
 
- * Week 1 (Sep. 27 - Oct 1)
+ * Week 1 (Oct 11 - Oct 15)
     * Launch this website
-    * Reach out to ECP/BioExcel portal users to explain what's happening
-    * Continue application/VM change requirement investigations
- * Week 2 (Oct 4 - Oct 8)
-    * Finalise application/VM change requirement investigations
-    * Update this website as new details arrive
-    * Switch our ECP "development" environment [#f4]_ to deploy applications/VMs to `Embassy4`
- * Week 3 (Oct 11 - Oct 15)
-    * Summary update via email - invite users to use our ECP "development" environment
-    * Monitor ECP "development" environments
+    * Reach out to ECP/BioExcel portal users to explain what's happening, and to invite ECP
+      users to use our "development" environment [#f5]_.
     * Continue to update this website as new details arrive
- * Week 4 (Oct 18 - Oct 22)
+ * Week 2 (Oct 18 - Oct 22)
     * Switch our ECP and BioExcel "production" environment to deploy applications/VMs to `Embassy4`
     * Summary update via email - invite people to use our ECP and BioExcel "production" environment
- * Week 5 (Oct 25 - Oct 29)
+ * Week 3 (Oct 25 - Oct 29)
     * Monitor ECP and BioExcel "production" environments
- * Week 6 onwards (Nov 1 onwards)
+ * Week 4 onwards (Nov 1 onwards)
     * `extcloud05` decommissioned
 
-Throughout this process you are welcome to contact Geoff (gef@ebi.ac.uk) and/or Alberto
-(albeus@ebi.ac.uk) with any queries or requests for assistance and we will try our best
-to help however we can.
+Throughout this process you are welcome to contact the BioExcel/|ECP| issue tracking email address
+-- ecp@ebi.ac.uk -- with any queries or requests for assistance and we will try our best to help
+however we can.
 
 .. toctree::
    :maxdepth: 2
@@ -95,11 +88,13 @@ to help however we can.
 
 .. rubric:: Footnotes
 
-.. [#f1] `Embassy Cloud Version 3`'s `extcloud06 <https://extcloud06.ebi.ac.uk>`_ has already been
+.. [#f1] At the time of writing their SSL certificate has expired and needs replacing, so there
+         may be a warning when you attempt to visit their website.
+.. [#f2] `Embassy Cloud Version 3`'s `extcloud06 <https://extcloud06.ebi.ac.uk>`_ has already been
          decommissioned, and although this impacted the portals, the change did not affect portal
          users.
-.. [#f2] These services were on `extcloud06`, but are now served from `Embassy4` and being tested.
-.. [#f3] Information such as https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/14/html/users_and_identity_management_guide/application_credentials
+.. [#f3] These services were on `extcloud06`, but are now served from `Embassy4` and being tested.
+.. [#f4] Information such as https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/14/html/users_and_identity_management_guide/application_credentials
          may be useful for guidance.
-.. [#f4] Unfortunately we do not have a "development" environment for the BioExcel portal, only ECP
+.. [#f5] Unfortunately we do not have a "development" environment for the BioExcel portal, only ECP
          at https://dev.portal.tsi.ebi.ac.uk/.
