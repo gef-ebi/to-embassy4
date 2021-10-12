@@ -10,6 +10,8 @@ BioExcel Portal and |EBI| Cloud Portal (|ECP|) To Embassy4 migration
 
 |hr|
 
+.. _summary:
+
 Summary
 =======
 
@@ -26,12 +28,14 @@ On **Monday Nov. 1st 2021** the second and final part -- `extcloud05 <https://ex
 -- will be decommissioned. **We therefore we need to have all remaining activities which use
 extcloud05 migrated to the new Embassy4 by Friday Oct. 29th 2021**.
 
+.. _impact:
+
 Impact
 ======
 
-The following EBI-managed services (i.e. the |UI|\ s and the |REST| services) have both already
-migrated to `Embassy4` [#f3]_, however currently the |VM|\ s which they create/"spin up" are still being
-deployed to the legacy `extcloud05`.
+Of the following EBI-managed services, the |UI|\ s and |REST| services have both already migrated
+to `Embassy4` [#f3]_, however currently the |VM|\ s which they create/"spin up" are still being
+deployed to the legacy `extcloud05` :
 
  * |ECP| (https://cloud-portal.ebi.ac.uk)
  * BioExcel Cloud Portal (https://bioexcel.ebi.ac.uk)
@@ -58,6 +62,8 @@ far the principle changes to make it compatible with `Embassy4` are as follows :
    application/VM lifecycle (e.g. https://github.com/EMBL-EBI-TSI/cpa-bioexcel-cwl/tree/master/ostack)
    also need to be changed.
 
+More details of these changes appear in the :ref:`technical` section.
+
 Action Plan
 ===========
 
@@ -78,11 +84,25 @@ Provisionally we have set ourselves the following timelines over the coming week
 
 Throughout this process you are welcome to contact the BioExcel/|ECP| issue tracking email address
 -- ecp@ebi.ac.uk -- with any queries or requests for assistance and we will try our best to help
-however we can.
+however we can. There's also a minimal :ref:`faq` which may help.
+
+Further Information
+-------------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+
+   technical/index
+
+.. toctree::
+   :maxdepth: 2
+
+   FAQ/index
+
+.. toctree::
+   :maxdepth: 2
+
+   contact/index
 
 |hr|
 
@@ -94,7 +114,8 @@ however we can.
          decommissioned, and although this impacted the portals, the change did not affect portal
          users.
 .. [#f3] These services were on `extcloud06`, but are now served from `Embassy4` and being tested.
-.. [#f4] Information such as https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/14/html/users_and_identity_management_guide/application_credentials
-         may be useful for guidance.
+.. [#f4] Information such as RedHat's `application_credentials <https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/14/html/users_and_identity_management_guide/application_credentials>`_
+         and `openstack client <https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/command_line_interface_reference/the_openstack_client>`_
+         documentation may be useful for guidance.
 .. [#f5] Unfortunately we do not have a "development" environment for the BioExcel portal, only ECP
          at https://dev.portal.tsi.ebi.ac.uk/.
