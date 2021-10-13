@@ -23,7 +23,13 @@ by the portal (or managed a portal team) but you are no longer in a position to 
 Does any of this affect BioBB?
 ------------------------------
 
-I don't think so - ask Alberto!
+I don't think so ... (ToDo)
+
+How do I get a credential?
+--------------------------
+
+Now that the username/password mechanism has been replace with an id/secret mechanism you'll need
+to obtain the latter via .... (ToDo)
 
 What about the BioExcel portal client (bioexcel-cli)?
 -----------------------------------------------------
