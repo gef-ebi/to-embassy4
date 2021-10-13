@@ -50,7 +50,7 @@ for the complete change set.
     ├── manifest.json                            <-- Optional change (e.g. update version no.)  
     ├── ostack
     │   ├── ansible
-    │   │   ├── ansible.cfg
+    │   │   ├── ansible.cfg                      <-- Mandatory change - terraform.py used
     │   │   ├── playbook.yml                     <-- Mandatory change - syntactical change (+ "pip installer issue")
     │   │   ├── requirements.yml
     │   │   └── roles
@@ -74,7 +74,7 @@ for the complete change set.
     │   ├── state.sh                             <-- Mandatory change - terraform-related
     │   └── terraform                            <-- Mandatory change - add file "provider.tf"
     │       ├── firewall.tf
-    │       ├── instance.tf                      <-- Mandatory change - terraform-related
+    │       ├── instance.tf                      <-- Mandatory change - terraform-related + syntax
     │       ├── keypair.tf
     │       ├── network.tf
     │       ├── output.tf
