@@ -23,13 +23,15 @@ by the portal (or managed a portal team) but you are no longer in a position to 
 Does any of this affect BioBB?
 ------------------------------
 
-I don't think so ... (ToDo)
+We currently do not believe that there will be any impact on BioBB but we will be testing this
+in due course.
 
-How do I get a credential?
---------------------------
+How do I obtain a pair of ID/Secret credentials?
+------------------------------------------------
 
-Now that the username/password mechanism has been replace with an id/secret mechanism you'll need
-to obtain the latter via .... (ToDo)
+Unless you have direct access to Embassy4 you will need to be assigned an ID and Secret for your
+application by someone with such access. We are currently investigating the best way to create
+such credentials, but for testing purposes please :ref:`contact us <contact>`.
 
 What about the BioExcel portal client (bioexcel-cli)?
 -----------------------------------------------------
@@ -48,4 +50,3 @@ applications :
  * Jupyter Server Instance
 
 We are currently investigating the impact of this migration on this application.
-
