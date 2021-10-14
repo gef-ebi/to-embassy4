@@ -51,7 +51,7 @@ for the complete change set.
     ├── ostack
     │   ├── ansible
     │   │   ├── ansible.cfg                      <-- Mandatory change - terraform.py used
-    │   │   ├── playbook.yml                     <-- Mandatory change - syntactical change (+ "pip installer issue")
+    │   │   ├── playbook.yml                     <-- Mandatory change - syntax + timeout change (+ "pip installer issue")
     │   │   ├── requirements.yml
     │   │   └── roles
     │   │       ├── cwl                          <-- Non-migratory "pip installer issue"
