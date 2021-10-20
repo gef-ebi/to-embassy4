@@ -30,6 +30,19 @@ extcloud05 migrated to the new Embassy4 by Friday Oct. 29th 2021**.
 
 .. _impact:
 
+Update: Oct 20th 2021
+=====================
+
+We have today made changes to our production server such that it now uses a newer version of
+Terraform (ver. 1.0.4) and no longer accepts username/password credentials (further details
+available in the :ref:`technical` section).
+
+Using the `CWL Training <https://github.com/EMBL-EBI-TSI/cpa-bioexcel-cwl>`_ application as an
+exemplar migration project, this is has been migrated to Embassy4 and a new version "2.0" is
+currently being tested in https://bioexcel.ebi.ac.uk/. For `ECP <https://cloud-portal.ebi.ac.uk/>`_
+users, the legacy shared "CWL VM environment" is still visible but will no longer work and will in
+due course be replaced.
+
 Impact
 ======
 
