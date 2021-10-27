@@ -28,6 +28,8 @@ On **Monday Nov. 1st 2021** the second and final part -- `extcloud05 <https://ex
 -- will be decommissioned. **We therefore we need to have all remaining activities which use
 extcloud05 migrated to the new Embassy4 by Friday Oct. 29th 2021**.
 
+|hr|
+
 Update: Oct 27th 2021
 =====================
 
@@ -69,6 +71,8 @@ exemplar migration project, this is has been migrated to Embassy4 and a new vers
 currently being tested in https://bioexcel.ebi.ac.uk/. For `ECP <https://cloud-portal.ebi.ac.uk/>`_
 users, the legacy shared "CWL VM environment" is still visible but will no longer work and will in
 due course be replaced.
+
+|hr|
 
 .. _impact:
 
