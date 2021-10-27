@@ -28,6 +28,35 @@ On **Monday Nov. 1st 2021** the second and final part -- `extcloud05 <https://ex
 -- will be decommissioned. **We therefore we need to have all remaining activities which use
 extcloud05 migrated to the new Embassy4 by Friday Oct. 29th 2021**.
 
+Update: Oct 27th 2021
+=====================
+
+We have finished testing `CWL Training <https://github.com/EMBL-EBI-TSI/cpa-bioexcel-cwl>`_ and
+it is deploying successfully to Embassy4 (albeit with provisos - see next paragraph) from either
+of the following :
+
+ #. https://bioexcel.ebi.ac.uk/
+ #. https://cloud-portal.ebi.ac.uk/
+
+.. warning:: As mentioned in the previous update of Oct 20th below, it's very unlikely any other
+             applications will deploy successfully - this is primarily because we use Terraform
+             ver. 1.0.4, whereas it's expected that all unmodified applications will be using
+             deploy/destroy scripts with incompatible Terraform ver. 0.9.1 or earlier syntax.
+
+Provisos
+-------- 
+
+ #. We haven't yet obtained sufficient resources on the Embassy4 platform to deploy anything more
+    than a single instance and destroy it immediately after use.
+ #. Due to the recent change to the EBI mailserver (e.g. using |2FA|, restricted network access) the
+    portal applications cannot send advisory emails to portal users (e.g. on destroying a deployed
+    instance, or user request to join a team). |br| 
+    We are currently in discussions to access alternative facilities but this process is ongoing -
+    in the meantime the portals will display error messages when they find themselves unable to
+    send emails.
+ #. The "Cloud resources" data displayed on BioExcel portal deployment is unhelpful, i.e. all values
+    are 0 (zero).
+
 Update: Oct 20th 2021
 =====================
 

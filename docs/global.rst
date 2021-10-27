@@ -1,3 +1,4 @@
+.. |2FA| replace:: :abbr:`2FA (Two-Factor Authentication)`
 .. |EBI| replace:: :abbr:`EBI (European Bioinformatics Institute)`
 .. |ECP| replace:: :abbr:`ECP (EBI Cloud Portal)`
 .. |EMBL| replace:: :abbr:`EMBL (European Molecular Biology Laboratory)`
